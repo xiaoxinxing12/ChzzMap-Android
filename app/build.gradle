@@ -32,9 +32,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
-    compile files('libs/BaiduLBS_Android.jar')
-    compile files('libs/BaiduTraceSDK_v2_1_12.jar')
-
     //自己的
     compile 'org.chzz:chzzui:1.2.0.1'
     //联网引擎 第三方
@@ -47,5 +44,6 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     //注解
     compile 'com.jakewharton:butterknife:7.0.1'
-
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
+    compile files('libs/AMap_3DMap_V3.3.3_20160726.jar')
 }

@@ -1,19 +1,16 @@
 package org.chzz.map;
 
 import android.app.Application;
-import android.app.Service;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Vibrator;
 
-import com.baidu.mapapi.SDKInitializer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import org.chzz.map.base.utils.ConstantValues;
 import org.chzz.map.engine.CookiesManager;
 import org.chzz.map.engine.Engine;
-import org.chzz.map.ui.activity.LocationService;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,7 +32,6 @@ public class App extends Application {
     public static int roleType;
     public static String versionName;
     public static int versionCode;
-    public LocationService locationService;
     public Vibrator mVibrator;
 
     @Override
@@ -64,9 +60,6 @@ public class App extends Application {
         /***
          * 初始化定位sdk，建议在Application中创建
          */
-        locationService = new LocationService(getApplicationContext());
-        mVibrator =(Vibrator)getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
-        SDKInitializer.initialize(getApplicationContext());
     }
 
     public static App getInstance() {

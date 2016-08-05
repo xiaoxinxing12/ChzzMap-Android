@@ -11,5 +11,7 @@
         <item name="colorControlNormal">@color/colorPrimaryDark</item>
         <item name="android:windowBackground">@android:color/white</item>
     </style>
-
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
 </resources>
